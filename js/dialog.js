@@ -1,0 +1,3 @@
+jQuery(document).ready(function($){
+	var wWidth = $(window).width();	var dWidth = 600;	if(wWidth < 900) {		dWidth = 300;	}	$( "#dialog-bulletin" ).dialog({modal: true, autoOpen: false, width: 'auto', dialogClass: "update-modal", create: function(){			$(this).css('maxWidth', dWidth);			$(this).css('padding-left', '0');			$(this).css('padding-right', '0');		}	});	$( "#bulletins-signup" ).click(function() {	  $( "#dialog-bulletin" ).dialog( "open" );	  return false;	});
+});

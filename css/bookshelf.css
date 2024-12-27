@@ -1,0 +1,43 @@
+.bulletin_bookshelf {
+	display: flex;
+	justify-content: space-between;
+}
+
+.bulletin_bookshelf .dpi_bulletin_shelf {
+	text-align: center;
+	transition: all .6s ease-in-out;
+}
+
+.bulletin_bookshelf a,
+.bulletin_bookshelf a:hover {
+	color: #454545;
+	text-decoration: none;
+}
+
+.bulletin_bookshelf .dpi_bulletin_shelf:hover {
+	transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1200px) {
+	.bulletin_bookshelf {
+		align-items: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	.bulletin_bookshelf a {
+		width: 22%;
+		margin-bottom: 15px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.bulletin_bookshelf a {
+		width: 48%;
+	}
+}
+
+@media only screen and (max-width: 460px) {
+	.bulletin_bookshelf a {
+		width: 100%;
+	}
+}
