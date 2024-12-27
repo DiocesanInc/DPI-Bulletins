@@ -33,13 +33,13 @@ add_action('init', function() {
 // Check for updates
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
-require DPI_EVA_FEED_DIR . '/plugin-updates/plugin-update-checker.php';
+require DPI_BULLETINS_DIR . '/plugin-updates/plugin-update-checker.php';
 
 $myUpdateChecker = PucFactory::buildUpdateChecker(
 
 	'https://github.com/DiocesanInc/DPI-Bulletins',
 
-	DPI_EVA_FEED_DIR . '/dpi-bulletins.php',
+	DPI_BULLETINS_DIR . '/dpi-bulletins.php',
 
 	'dpi-bulletins'
 
