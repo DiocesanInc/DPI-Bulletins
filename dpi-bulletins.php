@@ -4,7 +4,7 @@
 Plugin Name: DPI Bulletins
 Plugin URI: http://www.diocesan.com
 Description: Provides a quick method of auto generating links to church bulletins
-Version: 3.7
+Version: 3.7.1
 Author: Diocesan
 Author URI: http://www.diocesan.com
 License: GPLv2
@@ -16,7 +16,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
 // constants
 define('DPI_BULLETINS_ROOT', __FILE__);
 define('DPI_BULLETINS_DIR', __DIR__);
-define('DPI_BULLETINS_VER', '3.7');
+define('DPI_BULLETINS_VER', '3.7.1');
 define('DPI_BULLETINS_PLUGIN', plugin_basename( __FILE__ ) );
 
 // autoload plugin classes
