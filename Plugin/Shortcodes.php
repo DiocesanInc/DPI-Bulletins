@@ -72,7 +72,7 @@ class Shortcodes {
 					wp_enqueue_style( 'boostrap-css', plugins_url( '../css/bootstrap.css', __FILE__ ), null, '1.0.0', 'all' );
 					wp_enqueue_style( 'dpi-bulletins-tabs-css', plugins_url( '../css/tabs.css', __FILE__ ), null, '1.0.0', 'all' );
 					wp_enqueue_script( 'bootstrap-js', plugins_url( '../js/bootstrap.js', __FILE__ ), null, '1.0.0', 'all' );
-					wp_enqueue_script( 'dpi-bulletins-tabs-js', plugins_url( '../js/tabs.js', __FILE__ ), 'jquery', '1.0.0', true );
+					wp_enqueue_script( 'dpi-bulletins-tabs-js', plugins_url( '../js/tabs.js', __FILE__ ), array('jquery'), '1.0.0', true );
 					ob_start();
 					if( get_locale() == 'es_ES' ) { 
 						include DPI_BULLETINS_DIR . '/templates/tabs-es.php';
@@ -108,9 +108,9 @@ class Shortcodes {
 				} else {
 					if( $args['show_signup'] ) {
 						wp_enqueue_style( 'jquery-ui-css', 'https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css', null, '1.14.0', 'all' );
-						wp_enqueue_script( 'jquery-ui','https://code.jquery.com/ui/1.14.0/jquery-ui.js', 'jquery', '1.14.0', true );
+						wp_enqueue_script( 'jquery-ui','https://code.jquery.com/ui/1.14.0/jquery-ui.js', array('jquery'), '1.14.0', true );
 						wp_enqueue_style( 'dialog-css', plugins_url( '../css/dialog.css', __FILE__ ), null, '1.0.0', 'all' );
-						wp_enqueue_script( 'dpi-bulletins-dialog-js', plugins_url( '../js/dialog.js', __FILE__ ), 'jquery', '1.0.0', true );
+						wp_enqueue_script( 'dpi-bulletins-dialog-js', plugins_url( '../js/dialog.js', __FILE__ ), array('jquery'), '1.0.0', true );
 						$signup = $Controller->Transport->getSignup($args['id']);
 					}
 					ob_start();
@@ -128,9 +128,9 @@ class Shortcodes {
 				
 			case $this->signupShortcode:
 				wp_enqueue_style( 'jquery-ui-css', 'https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css', null, '1.14.0', 'all' );
-				wp_enqueue_script( 'jquery-ui','https://code.jquery.com/ui/1.14.0/jquery-ui.js', 'jquery', '1.14.0', true );
+				wp_enqueue_script( 'jquery-ui','https://code.jquery.com/ui/1.14.0/jquery-ui.js', array('jquery'), '1.14.0', true );
 				wp_enqueue_style( 'dialog-css', plugins_url( '../css/dialog.css', __FILE__ ), null, '1.0.0', 'all' );
-				wp_enqueue_script( 'dpi-bulletins-dialog-js', plugins_url( '../js/dialog.js', __FILE__ ), 'jquery', '1.0.0', true );
+				wp_enqueue_script( 'dpi-bulletins-dialog-js', plugins_url( '../js/dialog.js', __FILE__ ), array('jquery'), '1.0.0', true );
 				$args = ($this->sanitizeParams(shortcode_atts([
 					'id' => $Controller->getBulletinID(),
 				], $params)));
